@@ -1,0 +1,10 @@
+D:\0000\LTCSDL\QLBH\DAL\bin\Debug\DAL.dll.config
+D:\0000\LTCSDL\QLBH\DAL\bin\Debug\DAL.dll
+D:\0000\LTCSDL\QLBH\DAL\bin\Debug\DAL.pdb
+D:\0000\LTCSDL\QLBH\DAL\bin\Debug\DTO.dll
+D:\0000\LTCSDL\QLBH\DAL\bin\Debug\DTO.pdb
+D:\0000\LTCSDL\QLBH\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\0000\LTCSDL\QLBH\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\0000\LTCSDL\QLBH\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\0000\LTCSDL\QLBH\DAL\obj\Debug\DAL.dll
+D:\0000\LTCSDL\QLBH\DAL\obj\Debug\DAL.pdb

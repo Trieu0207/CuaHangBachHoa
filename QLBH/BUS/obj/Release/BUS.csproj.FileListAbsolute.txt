@@ -1,0 +1,12 @@
+D:\0000\LTCSDL\QLBH\BUS\bin\Release\BUS.dll
+D:\0000\LTCSDL\QLBH\BUS\bin\Release\BUS.pdb
+D:\0000\LTCSDL\QLBH\BUS\bin\Release\DAL.dll
+D:\0000\LTCSDL\QLBH\BUS\bin\Release\DTO.dll
+D:\0000\LTCSDL\QLBH\BUS\bin\Release\DAL.pdb
+D:\0000\LTCSDL\QLBH\BUS\bin\Release\DAL.dll.config
+D:\0000\LTCSDL\QLBH\BUS\bin\Release\DTO.pdb
+D:\0000\LTCSDL\QLBH\BUS\obj\Release\BUS.csproj.AssemblyReference.cache
+D:\0000\LTCSDL\QLBH\BUS\obj\Release\BUS.csproj.CoreCompileInputs.cache
+D:\0000\LTCSDL\QLBH\BUS\obj\Release\BUS.csproj.CopyComplete
+D:\0000\LTCSDL\QLBH\BUS\obj\Release\BUS.dll
+D:\0000\LTCSDL\QLBH\BUS\obj\Release\BUS.pdb

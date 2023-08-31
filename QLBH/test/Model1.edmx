@@ -1,0 +1,593 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DATABASEQLBHModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Bill">
+          <Key>
+            <PropertyRef Name="BillID" />
+          </Key>
+          <Property Name="BillID" Type="int" Nullable="false" />
+          <Property Name="Time" Type="datetime" Nullable="false" />
+          <Property Name="BillDetail" Type="int" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="totalprice" Type="float" Nullable="false" />
+          <Property Name="customerID" Type="int" />
+        </EntityType>
+        <EntityType Name="BillDetail">
+          <Key>
+            <PropertyRef Name="BillDetailID" />
+          </Key>
+          <Property Name="BillDetailID" Type="int" Nullable="false" />
+          <Property Name="BillID" Type="int" />
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="UnitPrice" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="categoryname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="img" Type="nvarchar" MaxLength="255" />
+          <Property Name="CategoryDescription" Type="nchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="CustomerID" />
+          </Key>
+          <Property Name="CustomerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="firstname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="lastname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="addrees" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="point" Type="int" />
+        </EntityType>
+        <EntityType Name="Employees">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="firstname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="lastname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Gioitinh" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="phone" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Ngaysinh" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="CategoryID" Type="int" />
+          <Property Name="productname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="price" Type="float" Nullable="false" />
+          <Property Name="quantity" Type="int" Nullable="false" />
+          <Property Name="note" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TimeSheet">
+          <Key>
+            <PropertyRef Name="TimeSheetID" />
+          </Key>
+          <Property Name="TimeSheetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmployeeID" Type="int" />
+          <Property Name="CheckIn" Type="datetime" />
+          <Property Name="CheckOut" Type="datetime" />
+          <Property Name="Ischeckin" Type="bit" />
+          <Property Name="RealTimeCheckIn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="UserApp">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmployeeID" Type="int" Nullable="false" />
+          <Property Name="username" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="user_role" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="ck_BillDetail_Bill">
+          <End Role="Bill" Type="Self.Bill" Multiplicity="0..1" />
+          <End Role="BillDetail" Type="Self.BillDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bill">
+              <PropertyRef Name="BillID" />
+            </Principal>
+            <Dependent Role="BillDetail">
+              <PropertyRef Name="BillID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ck_BillDetail_Products">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="BillDetail" Type="Self.BillDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="BillDetail">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Bill_customer">
+          <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
+          <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="CustomerID" />
+            </Principal>
+            <Dependent Role="Bill">
+              <PropertyRef Name="customerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Bill_User">
+          <End Role="UserApp" Type="Self.UserApp" Multiplicity="0..1" />
+          <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserApp">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Bill">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Detailproduct_category">
+          <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_TimeSheet">
+          <End Role="Employees" Type="Self.Employees" Multiplicity="0..1" />
+          <End Role="TimeSheet" Type="Self.TimeSheet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="TimeSheet">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_User">
+          <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+          <End Role="UserApp" Type="Self.UserApp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="UserApp">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DATABASEQLBHModelStoreContainer">
+          <EntitySet Name="Bill" EntityType="Self.Bill" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BillDetail" EntityType="Self.BillDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TimeSheet" EntityType="Self.TimeSheet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserApp" EntityType="Self.UserApp" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="ck_BillDetail_Bill" Association="Self.ck_BillDetail_Bill">
+            <End Role="Bill" EntitySet="Bill" />
+            <End Role="BillDetail" EntitySet="BillDetail" />
+          </AssociationSet>
+          <AssociationSet Name="ck_BillDetail_Products" Association="Self.ck_BillDetail_Products">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="BillDetail" EntitySet="BillDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Bill_customer" Association="Self.FK_Bill_customer">
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="Bill" EntitySet="Bill" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Bill_User" Association="Self.FK_Bill_User">
+            <End Role="UserApp" EntitySet="UserApp" />
+            <End Role="Bill" EntitySet="Bill" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Detailproduct_category" Association="Self.FK_Detailproduct_category">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_TimeSheet" Association="Self.FK_Employee_TimeSheet">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="TimeSheet" EntitySet="TimeSheet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_User" Association="Self.FK_Employee_User">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="UserApp" EntitySet="UserApp" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DATABASEQLBHModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Bill">
+          <Key>
+            <PropertyRef Name="BillID" />
+          </Key>
+          <Property Name="BillID" Type="Int32" Nullable="false" />
+          <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="BillDetail" Type="Int32" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="totalprice" Type="Double" Nullable="false" />
+          <Property Name="customerID" Type="Int32" />
+          <NavigationProperty Name="BillDetails" Relationship="Self.ck_BillDetail_Bill" FromRole="Bill" ToRole="BillDetail" />
+          <NavigationProperty Name="Customer" Relationship="Self.FK_Bill_customer" FromRole="Bill" ToRole="Customer" />
+          <NavigationProperty Name="UserApp" Relationship="Self.FK_Bill_User" FromRole="Bill" ToRole="UserApp" />
+        </EntityType>
+        <EntityType Name="BillDetail">
+          <Key>
+            <PropertyRef Name="BillDetailID" />
+          </Key>
+          <Property Name="BillDetailID" Type="Int32" Nullable="false" />
+          <Property Name="BillID" Type="Int32" />
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="UnitPrice" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Bill" Relationship="Self.ck_BillDetail_Bill" FromRole="BillDetail" ToRole="Bill" />
+          <NavigationProperty Name="Product" Relationship="Self.ck_BillDetail_Products" FromRole="BillDetail" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="categoryname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="img" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CategoryDescription" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Products" Relationship="Self.FK_Detailproduct_category" FromRole="Category" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="CustomerID" />
+          </Key>
+          <Property Name="CustomerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="addrees" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="point" Type="Int32" />
+          <NavigationProperty Name="Bills" Relationship="Self.FK_Bill_customer" FromRole="Customer" ToRole="Bill" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Gioitinh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Ngaysinh" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="TimeSheets" Relationship="Self.FK_Employee_TimeSheet" FromRole="Employees" ToRole="TimeSheet" />
+          <NavigationProperty Name="UserApps" Relationship="Self.FK_Employee_User" FromRole="Employees" ToRole="UserApp" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="CategoryID" Type="Int32" />
+          <Property Name="productname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="price" Type="Double" Nullable="false" />
+          <Property Name="quantity" Type="Int32" Nullable="false" />
+          <Property Name="note" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="BillDetails" Relationship="Self.ck_BillDetail_Products" FromRole="Product" ToRole="BillDetail" />
+          <NavigationProperty Name="Category" Relationship="Self.FK_Detailproduct_category" FromRole="Product" ToRole="Category" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TimeSheet">
+          <Key>
+            <PropertyRef Name="TimeSheetID" />
+          </Key>
+          <Property Name="TimeSheetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeID" Type="Int32" />
+          <Property Name="CheckIn" Type="DateTime" Precision="3" />
+          <Property Name="CheckOut" Type="DateTime" Precision="3" />
+          <Property Name="Ischeckin" Type="Boolean" />
+          <Property Name="RealTimeCheckIn" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK_Employee_TimeSheet" FromRole="TimeSheet" ToRole="Employees" />
+        </EntityType>
+        <EntityType Name="UserApp">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="user_role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Bills" Relationship="Self.FK_Bill_User" FromRole="UserApp" ToRole="Bill" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK_Employee_User" FromRole="UserApp" ToRole="Employees" />
+        </EntityType>
+        <Association Name="ck_BillDetail_Bill">
+          <End Role="Bill" Type="Self.Bill" Multiplicity="0..1" />
+          <End Role="BillDetail" Type="Self.BillDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bill">
+              <PropertyRef Name="BillID" />
+            </Principal>
+            <Dependent Role="BillDetail">
+              <PropertyRef Name="BillID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Bill_customer">
+          <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
+          <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="CustomerID" />
+            </Principal>
+            <Dependent Role="Bill">
+              <PropertyRef Name="customerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Bill_User">
+          <End Role="UserApp" Type="Self.UserApp" Multiplicity="0..1" />
+          <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserApp">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Bill">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ck_BillDetail_Products">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="BillDetail" Type="Self.BillDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="BillDetail">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Detailproduct_category">
+          <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_TimeSheet">
+          <End Role="Employees" Type="Self.Employee" Multiplicity="0..1" />
+          <End Role="TimeSheet" Type="Self.TimeSheet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="TimeSheet">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_User">
+          <End Role="Employees" Type="Self.Employee" Multiplicity="1" />
+          <End Role="UserApp" Type="Self.UserApp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="UserApp">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DATABASEQLBHEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Bills" EntityType="Self.Bill" />
+          <EntitySet Name="BillDetails" EntityType="Self.BillDetail" />
+          <EntitySet Name="Categories" EntityType="Self.Category" />
+          <EntitySet Name="Customers" EntityType="Self.Customer" />
+          <EntitySet Name="Employees" EntityType="Self.Employee" />
+          <EntitySet Name="Products" EntityType="Self.Product" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="TimeSheets" EntityType="Self.TimeSheet" />
+          <EntitySet Name="UserApps" EntityType="Self.UserApp" />
+          <AssociationSet Name="ck_BillDetail_Bill" Association="Self.ck_BillDetail_Bill">
+            <End Role="Bill" EntitySet="Bills" />
+            <End Role="BillDetail" EntitySet="BillDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Bill_customer" Association="Self.FK_Bill_customer">
+            <End Role="Customer" EntitySet="Customers" />
+            <End Role="Bill" EntitySet="Bills" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Bill_User" Association="Self.FK_Bill_User">
+            <End Role="UserApp" EntitySet="UserApps" />
+            <End Role="Bill" EntitySet="Bills" />
+          </AssociationSet>
+          <AssociationSet Name="ck_BillDetail_Products" Association="Self.ck_BillDetail_Products">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="BillDetail" EntitySet="BillDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Detailproduct_category" Association="Self.FK_Detailproduct_category">
+            <End Role="Category" EntitySet="Categories" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_TimeSheet" Association="Self.FK_Employee_TimeSheet">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="TimeSheet" EntitySet="TimeSheets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_User" Association="Self.FK_Employee_User">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="UserApp" EntitySet="UserApps" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DATABASEQLBHModelStoreContainer" CdmEntityContainer="DATABASEQLBHEntities">
+          <EntitySetMapping Name="Bills">
+            <EntityTypeMapping TypeName="DATABASEQLBHModel.Bill">
+              <MappingFragment StoreEntitySet="Bill">
+                <ScalarProperty Name="BillID" ColumnName="BillID" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="BillDetail" ColumnName="BillDetail" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="totalprice" ColumnName="totalprice" />
+                <ScalarProperty Name="customerID" ColumnName="customerID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BillDetails">
+            <EntityTypeMapping TypeName="DATABASEQLBHModel.BillDetail">
+              <MappingFragment StoreEntitySet="BillDetail">
+                <ScalarProperty Name="BillDetailID" ColumnName="BillDetailID" />
+                <ScalarProperty Name="BillID" ColumnName="BillID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="DATABASEQLBHModel.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="categoryname" ColumnName="categoryname" />
+                <ScalarProperty Name="img" ColumnName="img" />
+                <ScalarProperty Name="CategoryDescription" ColumnName="CategoryDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="DATABASEQLBHModel.Customer">
+              <MappingFragment StoreEntitySet="Customer">
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="firstname" ColumnName="firstname" />
+                <ScalarProperty Name="lastname" ColumnName="lastname" />
+                <ScalarProperty Name="addrees" ColumnName="addrees" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="point" ColumnName="point" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="DATABASEQLBHModel.Employee">
+              <MappingFragment StoreEntitySet="Employees">
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="firstname" ColumnName="firstname" />
+                <ScalarProperty Name="lastname" ColumnName="lastname" />
+                <ScalarProperty Name="Gioitinh" ColumnName="Gioitinh" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="Ngaysinh" ColumnName="Ngaysinh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="DATABASEQLBHModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="productname" ColumnName="productname" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="DATABASEQLBHModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TimeSheets">
+            <EntityTypeMapping TypeName="DATABASEQLBHModel.TimeSheet">
+              <MappingFragment StoreEntitySet="TimeSheet">
+                <ScalarProperty Name="TimeSheetID" ColumnName="TimeSheetID" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="CheckIn" ColumnName="CheckIn" />
+                <ScalarProperty Name="CheckOut" ColumnName="CheckOut" />
+                <ScalarProperty Name="Ischeckin" ColumnName="Ischeckin" />
+                <ScalarProperty Name="RealTimeCheckIn" ColumnName="RealTimeCheckIn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserApps">
+            <EntityTypeMapping TypeName="DATABASEQLBHModel.UserApp">
+              <MappingFragment StoreEntitySet="UserApp">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="user_role" ColumnName="user_role" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

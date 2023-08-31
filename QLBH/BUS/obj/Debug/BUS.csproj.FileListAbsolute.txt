@@ -1,0 +1,12 @@
+D:\0000\LTCSDL\QLBH\BUS\bin\Debug\BUS.dll
+D:\0000\LTCSDL\QLBH\BUS\bin\Debug\BUS.pdb
+D:\0000\LTCSDL\QLBH\BUS\bin\Debug\DAL.dll
+D:\0000\LTCSDL\QLBH\BUS\bin\Debug\DTO.dll
+D:\0000\LTCSDL\QLBH\BUS\bin\Debug\DAL.pdb
+D:\0000\LTCSDL\QLBH\BUS\bin\Debug\DAL.dll.config
+D:\0000\LTCSDL\QLBH\BUS\bin\Debug\DTO.pdb
+D:\0000\LTCSDL\QLBH\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\0000\LTCSDL\QLBH\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\0000\LTCSDL\QLBH\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\0000\LTCSDL\QLBH\BUS\obj\Debug\BUS.dll
+D:\0000\LTCSDL\QLBH\BUS\obj\Debug\BUS.pdb

@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="hgj" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hgj.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pngtree-vector-receipt-icon-png-image_4233801" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-vector-receipt-icon-png-image_4233801.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pngtree-invoice-icon-design-vector-png-image_15868201" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-invoice-icon-design-vector-png-image_15868201.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="istockphoto-1225070435-1024x10241" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\istockphoto-1225070435-1024x10241.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="qlnv32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\qlnv32.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ps" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ps.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="k22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\k22.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gioh1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gioh1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pngtree-vector-receipt-icon-png-image_423380" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-vector-receipt-icon-png-image_423380.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gioh11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gioh11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pngtree-logout-line-icon-vectors-png-image_1737867" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-logout-line-icon-vectors-png-image_1737867.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="n1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\n1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user-icons" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-icons.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sanpham1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sanpham1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kisspng-computer-icons-customer-service-icon-design-busine-ufo-silhouette-5b4d54c12cace8.163196881531794625183kh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-computer-icons-customer-service-icon-design-busine-ufo-silhouette-5b4d54c12cace8.163196881531794625183kh.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="istockphoto-928545918-1024x10242" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\istockphoto-928545918-1024x10242.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="khoa6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\khoa6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kisspng-computer-icons-revenue-finance-payment-service-growing-up-healthily-5aded7917339b4.537882651524553617472" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-computer-icons-revenue-finance-payment-service-growing-up-healthily-5aded7917339b4.537882651524553617472.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="khoa3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\khoa3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user-icons2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-icons2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tk2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tk2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="khoa31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\khoa31.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="packagingbrandingmarketingproductbottle-glyph-icon--vect-png_267791" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\packagingbrandingmarketingproductbottle-glyph-icon--vect-png_267791.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nv1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nv1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user-icons1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-icons1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kisspng-computer-icons-revenue-finance-payment-service-growing-up-healthily-5aded7917339b41" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-computer-icons-revenue-finance-payment-service-growing-up-healthily-5aded7917339b4.5378826515245536174721.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pngtree-vector-receipt-icon-png-image_4233802" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-vector-receipt-icon-png-image_4233802.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="istockphoto-1225070435-1024x1024" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\istockphoto-1225070435-1024x1024.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sanpham" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sanpham.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="istockphoto-928545918-1024x1024" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\istockphoto-928545918-1024x1024.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kisspng-computer-icons-profit-business-accounting-5adb23305448a51" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-computer-icons-profit-business-accounting-5adb23305448a5.04300726152431083234521.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ncc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ncc.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tk1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tk1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vector-gio-hang-2485" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vector-gio-hang-2485.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hinhnen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hinhnen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kisspng-computer-icons-profit-business-accounting-5adb23305448a5.0430072615243108323452" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-computer-icons-profit-business-accounting-5adb23305448a5.0430072615243108323452.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="khoa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\khoa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pngtree-user-management-icon-trendy-style-isolated-background-png-image_15433091" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-user-management-icon-trendy-style-isolated-background-png-image_15433091.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="5ef5dad34d0c84f0e423c6024e41f4ba" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5ef5dad34d0c84f0e423c6024e41f4ba.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="qlnv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\qlnv.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tải xuống1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tải xuống.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="k2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\k2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pngtree-key-icon-png-image_1530310" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-key-icon-png-image_1530310.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="qlnv31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\qlnv31.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="qlnv1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\qlnv1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vector-gio-hang-24851" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vector-gio-hang-24851.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pngtree-icon-close-button-png-image_1357955" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-icon-close-button-png-image_1357955.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="khm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\khm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pngtree-lake-view-desktop-wallpaper-image_725260" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-lake-view-desktop-wallpaper-image_725260.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nv3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nv3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="khoa4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\khoa4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pngtree-logout-line-icon-vectors-png-image_17378671" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-logout-line-icon-vectors-png-image_17378671.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gioh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gioh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="istockphoto-928545918-1024x10241" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\istockphoto-928545918-1024x10241.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cc1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cc1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="k23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\k23.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nocart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nocart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tải xuống" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tải xuống.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pngtree-user-management-icon-trendy-style-isolated-background-png-image_1543309" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-user-management-icon-trendy-style-isolated-background-png-image_1543309.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dmk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dmk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hinhnen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hinhnen1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hh1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hh1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="anh-gif-1-min" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\anh-gif-1-min.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tải xuống2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tải xuống1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="k21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\k21.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pngtree-invoice-icon-design-vector-png-image_1586820" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-invoice-icon-design-vector-png-image_1586820.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hh.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sua" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sua.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vector-gio-hang-24852" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vector-gio-hang-24852.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="qlnv3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\qlnv3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sign-Add-icon-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sign-Add-icon-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pngtree-invoice-icon-design-vector-png-image_15868202" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-invoice-icon-design-vector-png-image_15868202.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sanpham2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sanpham2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nocart2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nocart2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="khoa2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\khoa2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nocart1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nocart1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nv.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>
